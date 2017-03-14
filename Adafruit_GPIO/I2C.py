@@ -55,7 +55,7 @@ def get_default_bus():
 	# UP board uses I2C bus 1, like Revision 2 Pi
 	return 1
     else:
-        raise RuntimeError('Could not determine default I2C bus for platform.')
+        return 1
 
 def get_i2c_device(address, busnum=None, i2c_interface=None, **kwargs):
     """Return an I2C device for the specified address and on the specified bus.
